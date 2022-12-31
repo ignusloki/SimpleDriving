@@ -36,8 +36,9 @@ public class MapBrain : MonoBehaviour {
     private float fitnessObstacleWeight = 1;
 
     //Map start parameters
+    [SerializeField, Range(3, 200)]
+    public int widthOfMap = 11, lengthOfMap = 11;
     [SerializeField, Range(3, 20)]
-    private int widthOfMap = 11, lengthOfMap = 11;
     private Vector3 startPosition, exitPosition;
     private MapGrid grid;
     public Direction startPositionEdge = Direction.Left, exitPositionEdge = Direction.Right;
